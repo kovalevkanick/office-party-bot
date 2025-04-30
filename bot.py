@@ -10,7 +10,6 @@ from aiogram.types import (
     Message, InlineKeyboardMarkup, InlineKeyboardButton,
     InputMediaPhoto, FSInputFile, CallbackQuery
 )
-from aiogram.client.default import DefaultBotProperties
 from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.fsm.storage.memory import MemoryStorage
@@ -21,7 +20,7 @@ YOUR_TELEGRAM_ID = 428454164
 
 logging.basicConfig(level=logging.INFO)
 
-bot = Bot(token=API_TOKEN, default=DefaultBotProperties(parse_mode=ParseMode.HTML))
+bot = Bot(token=API_TOKEN, parse_mode=ParseMode.HTML)
 dp = Dispatcher(storage=MemoryStorage())
 
 class Quiz(StatesGroup):
