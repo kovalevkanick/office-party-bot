@@ -137,7 +137,7 @@ async def quiz_answer(callback_query: CallbackQuery, state: FSMContext):
 
         media = []
         for i in range(1, 6):
-            filename = f"images/{final_char}{i}.jpg"
+            filename = f"{final_char}{i}.jpg"
             if os.path.exists(filename):
                 media.append(InputMediaPhoto(media=FSInputFile(filename)))
 
